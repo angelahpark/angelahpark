@@ -4,12 +4,22 @@ html(lang="en")
     title AHP
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-    link(rel="stylesheet", href="/style.css")
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/bootstrap-responsive.min.css")
+    link(rel="stylesheet", href="/css/style.css")
     //- link(href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css')
     link(rel="shortcut icon", href="/favicon.ico")
   body
     header
       h1#title ANGELAHPARK
+    nav
+      ul.row-fluid
+        li.span4
+          a ABOUT
+        li.span4
+          a PORTFOLIO
+        li.span4
+          a CONTACT
     .container
       main#main
         block content
