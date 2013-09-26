@@ -1,19 +1,15 @@
 var util = require('util'),    
     http = require('http'),
     express = require('express'),
-    routes = require('routes'),
+    routes = require('./config/routes'),
     path = require('path');
 
 var app = express();
 
 app.set('port', process.env.PORT || 8000);
+app.set('view engine', 'jade');
 app.set('views', __dirname + '/app/views');
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-app.get('/', function(req, res){
-	res.send(' - ');
-});
 
 var before = function(req, res, next){
 	console.log("Before request: " + req.url);
@@ -23,7 +19,7 @@ var before = function(req, res, next){
 app.configure(function(){
   app.set('title', 'angela h park');
   app.use(before);
-  app.use(app.router); 
+  app.use(app.router);
 });
 
 routes(app);
