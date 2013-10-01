@@ -41,7 +41,11 @@ app.use(function(req, res, next){
   res.status(404).render('404', { url: req.originalUrl });
 });
 
-http.createServer(app).listen(app.get('port'), function(){
-  
+// http.createServer(app).listen(app.get('port'), function(){
+  http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World\n');
+  }).listen(80, '192.241.232.72');
+
   console.log('Express server listening on port ' + app.get('port'));
 });
