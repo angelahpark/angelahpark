@@ -6,21 +6,22 @@ var util = require('util'),
 
 var app = express();
 
-app.set('port', process.env.PORT || 8000);
-app.set('view engine', 'jade');
-app.set('views', __dirname + '/app/views');
-app.use(express.static(path.join(__dirname, 'public')));
+app.configure(function() {
+  app.set('port', process.env.PORT || 8000);
+  app.set('view engine', 'jade');
+  app.set('views', __dirname + '/app/views');
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.bodyParser());
+  app.use(express.cookieParser());
+  app.set('title', 'angela h park');
+  app.use(before);
+  app.use(app.router);
+});
 
 var before = function(req, res, next){
 	console.log("Before request: " + req.url);
 	next();
 }
-
-app.configure(function(){
-  app.set('title', 'angela h park');
-  app.use(before);
-  app.use(app.router);
-});
 
 routes(app);
 
