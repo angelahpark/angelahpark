@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Syncopate);
+/* line 3, ../sass/style.scss */
+body {
+  margin: 0;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+/* line 10, ../sass/style.scss */
+header {
+  background-color: #f8f8f8;
+  opacity: .9;
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  z-index: 99999;
+}
+@media (max-width: 767px) {
+  /* line 10, ../sass/style.scss */
+  header {
+    margin: auto -20px;
+  }
+}
+/* line 26, ../sass/style.scss */
+header h1#title {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 25px 0;
+  color: #b4b4b4;
+  opacity: .8;
+  letter-spacing: 3px;
+}
+/* line 38, ../sass/style.scss */
+header nav {
+  margin: auto;
+  padding: 10px 0 0 0;
+  background-color: white;
+  border-bottom: 1px solid #cacaca;
+  border-top: 1px solid #cacaca;
+  width: 100%;
+}
+/* line 47, ../sass/style.scss */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: auto;
+}
+/* line 53, ../sass/style.scss */
+header nav li {
+  text-align: center;
+}
+
+/* line 59, ../sass/style.scss */
+.container {
+  padding-top: 160px;
+}
+@media (max-width: 767px) {
+  /* line 59, ../sass/style.scss */
+  .container {
+    padding-top: 240px;
+  }
+}
+/* line 66, ../sass/style.scss */
+.container #page-slides .slidesjs-next {
+  float: right;
+}

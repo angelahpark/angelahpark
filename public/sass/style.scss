@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Syncopate);
+
+body {
+	margin: 0;
+	font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+
+
+header {
+	$header-color: #B4B4B4;
+	$header-border-color: #CACACA;
+	$header-bg-color: #F8F8F8;
+
+	@media(max-width: 767px) {
+		margin: auto -20px;
+	}
+
+	background-color: $header-bg-color;
+	opacity: .9;
+	position: fixed;
+	width: 100%;
+	height: 90px;
+	z-index: 99999;
+
+	h1#title {
+		font-family: 'Syncopate', sans-serif;
+		font-weight: 100;
+		font-size: 22px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 25px 0;
+		color: $header-color;
+		opacity: .8;
+		letter-spacing: 3px;
+	}
+
+	nav {
+
+		margin: auto;
+		padding: 10px 0 0 0;
+		background-color: white;
+		border-bottom: 1px solid $header-border-color;
+		border-top: 1px solid $header-border-color;
+		width: 100%;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			max-width: 500px;
+			margin: auto;
+		}
+		li {
+			text-align: center;
+		}
+	}
+}
+
+.container {
+	padding-top: 160px;
+	@media (max-width: 767px) {
+		padding-top: 240px;
+	}
+
+	#page-slides {
+		.slidesjs-next {
+			float: right;
+		}
+	}
+}

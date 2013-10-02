@@ -4,24 +4,34 @@ html(lang="en")
     title AHP
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-    link(rel="stylesheet", href="/css/bootstrap.min.css")
-    link(rel="stylesheet", href="/css/bootstrap-responsive.min.css")
-    link(rel="stylesheet", href="/css/style.css")
-    //- link(href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css')
+    link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheets/bootstrap-responsive.min.css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script(src="/js/jquery.slides.js")
     link(rel="shortcut icon", href="/favicon.ico")
   body
     header
       h1#title ANGELAHPARK
-    nav
-      ul.row-fluid
-        li.span4
-          a ABOUT
-        li.span4
-          a PORTFOLIO
-        li.span4
-          a CONTACT
+      nav
+        ul.row-fluid
+          li.span3
+            a ABOUT
+          li.span3
+            a PORTFOLIO
+          li.span3
+            a RESUME
+          li.span3
+            a CONTACT
     .container
       main#main
         block content
       footer#footer
     script
+      $(function(){
+        $("#slides").slidesjs({
+          pagination: {
+            active: false
+          }
+        });
+      });
