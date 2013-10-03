@@ -586,12 +586,22 @@
       }
       return false;
     };
-    return $.fn[pluginName] = function(options) {
-      return this.each(function() {
-        if (!$.data(this, "plugin_" + pluginName)) {
-          return $.data(this, "plugin_" + pluginName, new Plugin(this, options));
-        }
-      });
+    return $.fn[pluginName] = function (options) {
+      if (typeof options === "string") {
+        var args = Array.prototype.slice.call(arguments, 1);
+        this.each(function () {
+          var plugin = $.data(this, 'plugin_' + pluginName);
+          plugin[options].apply(plugin, args);
+        });
+     }
+      else {
+        return this.each(function () {
+          if (!$.data(this, 'plugin_' + pluginName)) {
+              $.data(this, 'plugin_' + pluginName,
+        new Plugin(this, options));
+          }
+        });
+      }
     };
   })(jQuery, window, document);
 

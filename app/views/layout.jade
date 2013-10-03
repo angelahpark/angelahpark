@@ -13,16 +13,16 @@ html(lang="en")
   body
     header
       h1#title ANGELAHPARK
-      nav
-        ul.row-fluid
-          li.span3
-            a ABOUT
-          li.span3
-            a PORTFOLIO
-          li.span3
-            a RESUME
-          li.span3
-            a CONTACT
+      nav.hidden-phone
+        ul.row-fluid.slidesjs-pagination
+          li.span3.slidesjs-pagination-item
+            a(href="#" data-slidesjs-item="0") ABOUT
+          li.span3.slidesjs-pagination-item
+            a(href="#" data-slidesjs-item="1") PORTFOLIO
+          li.span3.slidesjs-pagination-item
+            a(href="#" data-slidesjs-item="2") RESUME
+          li.span3.slidesjs-pagination-item
+            a(href="#" data-slidesjs-item="3") CONTACT
     .container
       main#main
         block content
@@ -34,4 +34,10 @@ html(lang="en")
             active: false
           }
         });
+
+        $("nav a").bind('click', function(){
+          event.preventDefault();
+          $('#page-slides').slidesjs("goto", $(this).attr("data-slidesjs-item") * 1 + 1);
+        });
+
       });
