@@ -8,36 +8,105 @@ html(lang="en")
     link(rel="stylesheet", href="/stylesheets/bootstrap-responsive.min.css")
     link(rel="stylesheet", href="/stylesheets/style.css")
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-    script(src="/js/jquery.slides.js")
+    script(src="/js/swipe.js")
     link(rel="shortcut icon", href="/favicon.ico")
   body
     header
-      h1#title ANGELAHPARK
+      h1(href="/")#title ANGELAHPARK
       nav.hidden-phone
-        ul.row-fluid.slidesjs-pagination
-          li.span3.slidesjs-pagination-item
-            a(href="#" data-slidesjs-item="0") ABOUT
-          li.span3.slidesjs-pagination-item
-            a(href="#" data-slidesjs-item="1") PORTFOLIO
-          li.span3.slidesjs-pagination-item
-            a(href="#" data-slidesjs-item="2") RESUME
-          li.span3.slidesjs-pagination-item
-            a(href="#" data-slidesjs-item="3") CONTACT
+        ul.row-fluid
+          li.span3.about
+            a(href="#") ABOUT
+          li.span3.portfolio
+            a(href="#") PORTFOLIO
+          li.span3.resume
+            a(href="#") RESUME
+          li.span3.contact
+            a(href="#") CONTACT
+      nav.visible-phone
+        ul
+          li.about
+            | ABOUT
+          li.portfolio
+            | PORTFOLIO
+          li.resume
+            | RESUME
+          li.contact
+            | CONTACT
     .container
       main#main
         block content
       footer#footer
     script
-      $(function(){
-        $("#page-slides").slidesjs({
-          pagination: {
-            active: false
+      window.mySwipe = Swipe(document.getElementById('page-slides'), {
+          continuous: false,
+          callback: function(index, elem) {
+            console.log(elem);
+            switch(index) {
+              case 0:
+                $('.arrow-prev').hide();
+                $('.arrow-next').show();
+                $('nav.visible-phone li:not(".about")').hide();
+                $('nav.visible-phone li.about').show();
+                break;
+              case 1:
+                $('.arrow-prev, .arrow-next').show();
+                $('nav.visible-phone li:not(".portfolio")').hide();
+                $('nav.visible-phone li.portfolio').show();
+                break;
+              case 2:
+                $('.arrow-prev, .arrow-next').show();
+                $('nav.visible-phone li:not(".resume")').hide();
+                $('nav.visible-phone li.resume').show();
+                break;
+              case 3:
+                $('.arrow-next').hide();
+                $('.arrow-prev').show();
+                $('nav.visible-phone li:not(".contact")').hide();
+                $('nav.visible-phone li.contact').show();
+                break;
+            }
           }
         });
-
-        $("nav a").bind('click', function(){
-          event.preventDefault();
-          $('#page-slides').slidesjs("goto", $(this).attr("data-slidesjs-item") * 1 + 1);
+      $(function() {
+        // links arrows
+        $(".arrow-next").click(function(e) {
+          e.preventDefault();
+          mySwipe.next();
         });
+        $(".arrow-prev").click(function(e) {
+          e.preventDefault();
+          mySwipe.prev();
+        });
+        // links nav
+        $(".about").click(function(e) {
+          e.preventDefault();
+          mySwipe.slide(0, 0);
+          $('arrow.next').show();
+          $("nav.visible-phone li:not('.about')").hide();
+          $("nav.visible-phone li.about").show();
+          return false;
+        })
+        $(".portfolio").click(function(e) {
+          e.preventDefault();
+          mySwipe.slide(1, 0);
+          $("nav.visible-phone li:not('.portfolio')").hide();
+          $("nav.visible-phone li.portfolio").show();
+          return false;
+        })
+        $(".resume").click(function(e) {
+          e.preventDefault();
+          mySwipe.slide(2, 0);
+          $("nav.visible-phone li:not('.resume')").hide();
+          $("nav.visible-phone li.resume").show();
+          return false;
+        })
+        $(".contact").click(function(e) {
+          e.preventDefault();
+          mySwipe.slide(3, 0);
+          $("nav.visible-phone li:not('.contact')").hide();
+          $("nav.visible-phone li.contact").show();
+          return false;
+        })
 
       });

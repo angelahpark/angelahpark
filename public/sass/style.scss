@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Syncopate);
 
+// mixins
+
+//
+
 body {
 	margin: 0;
 	font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
@@ -7,7 +11,6 @@ body {
 a {
 	color: black;
 }
-
 
 header {
 	$header-color: #B4B4B4;
@@ -31,7 +34,7 @@ header {
 		font-size: 22px;
 		text-align: center;
 		margin: 0 auto;
-		padding: 25px 0;
+		padding: 20px 0;
 		color: $header-color;
 		opacity: .8;
 		letter-spacing: 3px;
@@ -60,17 +63,70 @@ header {
 			text-align: center;
 		}
 	}
+
+	nav.visible-phone {
+		padding: 10px 0;
+		li {
+			display: none;
+		}
+		li.about {
+			display: block;
+		}
+	}
+
 }
 
 .container {
-	padding-top: 160px;
-	@media (max-width: 767px) {
-		padding-top: 240px;
+	@media(max-width: 767px) {
+		padding: 0 15px;
 	}
 
-	#page-slides {
-		.slidesjs-next {
-			float: right;
+
+	main {
+		margin-top: 140px;
+		@media (max-width: 767px) {
+			margin-top: 100px;
 		}
+	}
+}
+
+
+// swipe styles //
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+.swipe-nav {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	left: 0;
+	z-index: 9999;
+	.arrow-prev {
+		margin-left: 10px;
+		width: 15px;
+		height: 30px;
+		background: url("../images/arrow-prev.png") no-repeat 10px;
+		float: left;
+		background-position: center left;
+		display: none;
+	}
+	.arrow-next {
+		margin-right: 10px;
+		width: 15px;
+		height: 30px;
+		background: url("../images/arrow-next.png") no-repeat 10px;
+		float: right;
+		background-position: center right;
 	}
 }
