@@ -12,31 +12,60 @@ html(lang="en")
     link(rel="shortcut icon", href="/favicon.ico")
   body
     header
-      h1(href="/")#title ANGELAHPARK
+      h1#title
+        a(href="#") ANGELAHPARK
       nav.hidden-phone
-        ul.row-fluid
-          li.span3.about
-            a(href="#") ABOUT
-          li.span3.portfolio
-            a(href="#") PORTFOLIO
-          li.span3.resume
-            a(href="#") RESUME
-          li.span3.contact
-            a(href="#") CONTACT
-      nav.visible-phone
         ul
           li.about
-            | ABOUT
+            a(href="#") about
           li.portfolio
-            | PORTFOLIO
+            a(href="#") portfolio
           li.resume
-            | RESUME
+            a(href="#") resume
           li.contact
-            | CONTACT
+            a(href="#") contact
+      nav.visible-phone
+        ul
+          li.home
+            | home
+          li.about
+            | about
+          li.portfolio
+            | portfolio
+          li.resume
+            | resume
+          li.contact
+            | contact
+    //- nav.hidden-phone.fixed
+    //-   ul
+    //-     li.about
+    //-       a(href="#") about
+    //-     li.portfolio
+    //-       a(href="#") portfolio
+    //-     li.resume
+    //-       a(href="#") resume
+    //-     li.contact
+    //-       a(href="#") contact
     .container
       main#main
         block content
-      footer#footer
+      footer
+        section#footer
+          small#created Angela Park &#169; 2013
+          div#links
+            ol
+              li
+                span.social-link#facebook
+                  a(href='www.facebook.com/angelahpark' target="_blank") facebook
+              li
+                span.social-link#tumblr
+                  a(href="www.angelahpark.tumblr.com") tumblr
+              li
+                span.social-link#instagram
+                  a(href="www.instagram.com/angelahpark") instagram
+              li
+                span.social-link#vsco
+                  a(href="www.angelahpark.vsco.co") vsco
     script
       window.mySwipe = Swipe(document.getElementById('page-slides'), {
           continuous: false,
@@ -46,20 +75,25 @@ html(lang="en")
               case 0:
                 $('.arrow-prev').hide();
                 $('.arrow-next').show();
+                $('nav.visible-phone li:not(".home")').hide();
+                $('nav.visible-phone li.home').show();
+                break;
+              case 1:
+                $('.arrow-prev, .arrow-next').show();
                 $('nav.visible-phone li:not(".about")').hide();
                 $('nav.visible-phone li.about').show();
                 break;
-              case 1:
+              case 2:
                 $('.arrow-prev, .arrow-next').show();
                 $('nav.visible-phone li:not(".portfolio")').hide();
                 $('nav.visible-phone li.portfolio').show();
                 break;
-              case 2:
+              case 3:
                 $('.arrow-prev, .arrow-next').show();
                 $('nav.visible-phone li:not(".resume")').hide();
                 $('nav.visible-phone li.resume').show();
                 break;
-              case 3:
+              case 4:
                 $('.arrow-next').hide();
                 $('.arrow-prev').show();
                 $('nav.visible-phone li:not(".contact")').hide();
@@ -68,45 +102,57 @@ html(lang="en")
             }
           }
         });
-      $(function() {
-        // links arrows
-        $(".arrow-next").click(function(e) {
-          e.preventDefault();
-          mySwipe.next();
-        });
-        $(".arrow-prev").click(function(e) {
-          e.preventDefault();
-          mySwipe.prev();
-        });
-        // links nav
-        $(".about").click(function(e) {
-          e.preventDefault();
-          mySwipe.slide(0, 0);
-          $('arrow.next').show();
-          $("nav.visible-phone li:not('.about')").hide();
-          $("nav.visible-phone li.about").show();
-          return false;
-        })
-        $(".portfolio").click(function(e) {
-          e.preventDefault();
-          mySwipe.slide(1, 0);
-          $("nav.visible-phone li:not('.portfolio')").hide();
-          $("nav.visible-phone li.portfolio").show();
-          return false;
-        })
-        $(".resume").click(function(e) {
-          e.preventDefault();
-          mySwipe.slide(2, 0);
-          $("nav.visible-phone li:not('.resume')").hide();
-          $("nav.visible-phone li.resume").show();
-          return false;
-        })
-        $(".contact").click(function(e) {
-          e.preventDefault();
-          mySwipe.slide(3, 0);
-          $("nav.visible-phone li:not('.contact')").hide();
-          $("nav.visible-phone li.contact").show();
-          return false;
-        })
+        $(function() {
+          // links arrows
+          $(".arrow-next").click(function(e) {
+            e.preventDefault();
+            mySwipe.next();
+          });
+          $(".arrow-prev").click(function(e) {
+            e.preventDefault();
+            mySwipe.prev();
+          });
+          // links nav
+          $("#title a").click(function(e) {
+            e.preventDefault();
+            mySwipe.slide(0, 0);
+            $('arrow.next').show();
+            return false;
+          });
+          $(".about").click(function(e) {
+            e.preventDefault();
+            mySwipe.slide(1, 0);
+            $("nav.visible-phone li:not('.about')").hide();
+            $("nav.visible-phone li.about").show();
+            return false;
+          });
+          $(".portfolio").click(function(e) {
+            e.preventDefault();
+            mySwipe.slide(2, 0);
+            $("nav.visible-phone li:not('.portfolio')").hide();
+            $("nav.visible-phone li.portfolio").show();
+            return false;
+          });
+          $(".resume").click(function(e) {
+            e.preventDefault();
+            mySwipe.slide(3, 0);
+            $("nav.visible-phone li:not('.resume')").hide();
+            $("nav.visible-phone li.resume").show();
+            return false;
+          });
+          $(".contact").click(function(e) {
+            e.preventDefault();
+            mySwipe.slide(4, 0);
+            $("nav.visible-phone li:not('.contact')").hide();
+            $("nav.visible-phone li.contact").show();
+            return false;
+          });
 
-      });
+          //- $(window).scroll(function() {
+          //-     if ($(this).scrollTop() > 45) {
+          //-         $('.fixed').show();
+          //-     } else {
+          //-       $('.fixed').hide();
+          //-     }
+          //- });
+        });
