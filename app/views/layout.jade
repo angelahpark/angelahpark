@@ -1,158 +1,52 @@
 !!! 5
 html(lang="en")
   head
-    title AHP
+    title ANGELAHPARK
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-    link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
-    link(rel="stylesheet", href="/stylesheets/bootstrap-responsive.min.css")
+    //- link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+    //- link(rel="stylesheet", href="/stylesheets/bootstrap-responsive.min.css")
     link(rel="stylesheet", href="/stylesheets/style.css")
+    //- link(rel="stylesheet", href="/stylesheets/swipe-style.css")
+    //- link(rel="stylesheet", href="/stylesheets/owl.carousel.css")
+    //- link(rel="stylesheet", href="/stylesheets/owl.theme.css")
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-    script(src="/js/swipe.js")
+    script(src="/js/Chart.min.js")
+    // script(src="/js/swipe.js")
+    // script(src="/js/owl.carousel.min.js")
     link(rel="shortcut icon", href="/favicon.ico")
   body
+    div.body-border#left
+    div.body-border#right
+    div.body-border#bottom
+    div.body-border#top
     header
-      h1#title
-        a(href="#") ANGELAHPARK
-      nav.hidden-phone
-        ul
-          li.about
-            a(href="#") about
-          li.portfolio
-            a(href="#") portfolio
-          li.resume
-            a(href="#") resume
-          li.contact
-            a(href="#") contact
-      nav.visible-phone
-        ul
-          li.home
-            | home
-          li.about
-            | about
-          li.portfolio
-            | portfolio
-          li.resume
-            | resume
-          li.contact
-            | contact
-    //- nav.hidden-phone.fixed
-    //-   ul
-    //-     li.about
-    //-       a(href="#") about
-    //-     li.portfolio
-    //-       a(href="#") portfolio
-    //-     li.resume
-    //-       a(href="#") resume
-    //-     li.contact
-    //-       a(href="#") contact
-    .container
-      main#main
+        nav
+            ul
+              li.about
+                a(href="#about") about
+              li.portfolio
+                a(href="#portfolio") portfolio
+              //- li.resume
+              //-   a(href="#resume") resume
+              //- li.travel
+              //-   a(href="#") travel
+              li.contact
+                a(href="#contact") contact
+            #logo
+    div.main
         block content
-      footer
-        section#footer
-          small#created Angela Park &#169; 2013
-          div#links
-            ol
-              li
-                span.social-link#facebook
-                  a(href='www.facebook.com/angelahpark' target="_blank") facebook
-              li
-                span.social-link#tumblr
-                  a(href="www.angelahpark.tumblr.com") tumblr
-              li
-                span.social-link#instagram
-                  a(href="www.instagram.com/angelahpark") instagram
-              li
-                span.social-link#vsco
-                  a(href="www.angelahpark.vsco.co") vsco
     script
-      window.mySwipe = Swipe(document.getElementById('page-slides'), {
-          continuous: false,
-          callback: function(index, elem) {
-            console.log(elem);
-            switch(index) {
-              case 0:
-                $('.arrow-prev').hide();
-                $('.arrow-next').show();
-                $('nav.visible-phone li:not(".home")').hide();
-                $('nav.visible-phone li.home').show();
-                break;
-              case 1:
-                $('.arrow-prev, .arrow-next').show();
-                $('nav.visible-phone li:not(".about")').hide();
-                $('nav.visible-phone li.about').show();
-                break;
-              case 2:
-                $('.arrow-prev, .arrow-next').show();
-                $('nav.visible-phone li:not(".portfolio")').hide();
-                $('nav.visible-phone li.portfolio').show();
-                break;
-              case 3:
-                $('.arrow-prev, .arrow-next').show();
-                $('nav.visible-phone li:not(".resume")').hide();
-                $('nav.visible-phone li.resume').show();
-                break;
-              case 4:
-                $('.arrow-next').hide();
-                $('.arrow-prev').show();
-                $('nav.visible-phone li:not(".contact")').hide();
-                $('nav.visible-phone li.contact').show();
-                break;
-            }
-          }
-        });
-        $(function() {
-          // links arrows
-          $(".arrow-next").click(function(e) {
-            e.preventDefault();
-            mySwipe.next();
-          });
-          $(".arrow-prev").click(function(e) {
-            e.preventDefault();
-            mySwipe.prev();
-          });
-          // links nav
-          $("#title a").click(function(e) {
-            e.preventDefault();
-            mySwipe.slide(0, 0);
-            $('arrow.next').show();
-            return false;
-          });
-          $(".about").click(function(e) {
-            e.preventDefault();
-            mySwipe.slide(1, 0);
-            $("nav.visible-phone li:not('.about')").hide();
-            $("nav.visible-phone li.about").show();
-            return false;
-          });
-          $(".portfolio").click(function(e) {
-            e.preventDefault();
-            mySwipe.slide(2, 0);
-            $("nav.visible-phone li:not('.portfolio')").hide();
-            $("nav.visible-phone li.portfolio").show();
-            return false;
-          });
-          $(".resume").click(function(e) {
-            e.preventDefault();
-            mySwipe.slide(3, 0);
-            $("nav.visible-phone li:not('.resume')").hide();
-            $("nav.visible-phone li.resume").show();
-            return false;
-          });
-          $(".contact").click(function(e) {
-            e.preventDefault();
-            mySwipe.slide(4, 0);
-            $("nav.visible-phone li:not('.contact')").hide();
-            $("nav.visible-phone li.contact").show();
-            return false;
-          });
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
 
-          //- $(window).scroll(function() {
-          //-     if ($(this).scrollTop() > 45) {
-          //-         $('.fixed').show();
-          //-     } else {
-          //-       $('.fixed').hide();
-          //-     }
-          //- });
+                var target = this.hash,
+                $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 700, 'swing'
+                );
+            });
         });

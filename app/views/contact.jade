@@ -1,5 +1,15 @@
 mixin contact()
-	div#content-contact.row-fluid
+	- var socialIcons = ['facebook', 'tumblr', 'gmail', 'linkedin', 'google+']
+	- var socialLinks = ['facebook.com/angelahpark', 'angelahpark.tumblr.com', 'mailto:ahaekyungp@gmail.com','www.linkedin.com/pub/angela-park/40/147/376/', 'plus.google.com/101247993233456221899']
+	.number.target#contact 3
+	div#content-contact
+		h2 get in touch
+		div.social-media
+			ul
+				each socialIcon in socialIcons
+					li
+						a()
+							img(src="images/social/#{socialIcon}.png")
 		form
 			input(type="text" placeholder="NAME")
 			input(type="email" placeholder="EMAIL")

@@ -1,39 +1,24 @@
 mixin portfolio()
-	div#content-portfolio.container-fluid
-		div.row-fluid
-			div.span3
-				div.feature-img#yamaha
-					a
-						div
-							|Yamaha Boats and Waverunners Mobile
-			div.span3
-				div.feature-img#naked
-					a
-						div
-							|Naked Juice -- Drink Good Do Good
-			div.span3
-				div.feature-img#balloon
-					a
-						div
-							|Balloon
-			div.span3
-				div.feature-img#kenny-stoff
-					a
-						div
-							|Kenny Stoff
-		div.row-fluid
-			div.span3
-				div.feature-img#omaze
-					a
-						div
-							|Omaze
-			div.span3
-				div.feature-img#manufactur
-					a
-						div
-							|Manufactur Concept
-			div.span3
-				div.feature-img#marysia-swim
-					a
-						div
-							|Marysia Swim
+	.number.target#portfolio 2
+	div#content-portfolio
+		h2 portfolio + resume
+		div.column-three
+			a
+				div.portfolio-box(style="background-image:url('images/portfolio/balloon_link.png')")
+					.big.title Balloon
+		div.column-three
+			a
+				div.portfolio-box(style="background-image:url('images/portfolio/kenny_link.png')")
+		div.column-three
+			a
+				div.portfolio-box(style="background-image:url('images/portfolio/manufactur_link.jpg')")
+		div.column-three
+			a
+				div.portfolio-box(style="background-image:url('images/portfolio/marysia_link.jpg')")
+		div.column-three
+			a
+				div.portfolio-box(style="background-image:url('images/portfolio/naked_link.gif')")
+		div.column-three
+			a
+				div.portfolio-box(style="background-image:url('images/portfolio/yamaha_link.png')")
+		div(style="clear: both;")

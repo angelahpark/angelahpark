@@ -1,22 +1,18 @@
 extends ../layout
 include ../about
 include ../portfolio
-include ../resume
+//- include ../resume
 include ../contact
+//- include ../travel
 
 block content
-	div.swipe-nav
-		a.arrow-prev
-		a.arrow-next
-	div#page-slides.swipe
-		div.swipe-wrap
-			div#index
-				.index-image
-			div#about
-				+about
-			div#portfolio
-				+portfolio
-			div#resume
-				+resume
-			div#contact
-				+contact
+	section
+		+about
+	section
+		+portfolio
+	//- section
+		//- +resume
+	//- section#travel
+	//- 	+travel
+	section
+		+contact

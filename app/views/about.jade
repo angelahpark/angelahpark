@@ -1,15 +1,65 @@
 mixin about()
-	div#content-about.row-fluid
-		div.picture.span5.offset1
-			img(src="images/profile_1.jpg")
-			.caption Spice Market | Istanbul, Turkey
-		div.span4.offset1
-			h2 In a nutshell: Angela Park
-			.description
-				p I'm a Los Angeles / Orange County based front-end web developer.  When I'm not sitting in front of a computer, you can find me:
-					ul
-						li exercising (ballet, yoga, walking, etc).
-						li on my massage chair watching HGTV.
-						li sitting in a window seat aboard a plane to my next destination.
-						li with a camera attached to my face
-						li trying to fit in with hipsters at various hipster hangouts
+	- var topics = ['HGTV', 'NPR', 'TED talks', 'God', 'travel', 'health', 'korean shows & music', 'board games', 'conspiracy theories', 'dance']
+
+	.number.target#about 1
+	div#content-about
+		h2 Hi, my name is Angela Park and this is:
+		div.pie-chart.column-three
+			p.title How I spend my time
+			canvas#pie(width="205" height="205")
+		div.list.column-three
+			p.title My face
+			img(src="images/profile_2.jpg")#face
+		div.cloud.column-three
+			p.title What I like to talk about
+			div#topics
+				ul
+					each topic in topics
+						li
+							| #{topic}
+		div(style="clear: both;")
+	script
+		var data = [
+			{
+				value: 30,
+				color:"#5C4B51",
+				label: 'WEB',
+				labelFontSize: '11'
+			},
+			{
+				value : 15,
+				color : "#8CBEB2",
+				label : 'CHURCH',
+				labelFontSize: '11'
+			},
+			{
+				value : 10,
+				color : "#F2EBBF",
+				label : 'TRAVEL',
+				labelFontSize: '11'
+			},
+			{
+				value : 10,
+				color : "#F3B562",
+				label : 'EXERCISE',
+				labelFontSize: '11'
+			},
+			{
+				value : 25,
+				color : "#F06060",
+				label : 'SLEEP',
+				labelFontSize: '11'
+			},
+			{
+				value : 10,
+				color: "#C6AFA0",
+				label : 'INSPIRATION',
+				labelFontSize : '10'
+			}
+		];
+		var options = 
+			{
+				segmentShowStroke : false
+			};
+		var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(data, options);
+		
