@@ -111,6 +111,7 @@ img {
 /* line 113, ../sass/style.scss */
 .main section {
   position: relative;
+  padding: 0 0 100px 0;
 }
 @media (min-width: 767px) {
   /* line 113, ../sass/style.scss */
@@ -123,10 +124,10 @@ img {
     justify-content: center;
     align-items: center;
     height: 95%;
-    padding: 0 0 100px 0;
+    padding: 0;
   }
 }
-/* line 121, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .main .target {
   border-top: 60px solid transparent;
   margin: -30px 0 0;
@@ -134,26 +135,26 @@ img {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 128, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .main .target:before {
   content: "";
   position: absolute;
 }
 
-/* line 133, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .body-border {
   border: 7px solid #444;
   position: fixed;
   z-index: 99999;
 }
 @media (max-width: 480px) {
-  /* line 133, ../sass/style.scss */
+  /* line 134, ../sass/style.scss */
   .body-border {
     border: 5px solid #444;
   }
 }
 
-/* line 141, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 #left {
   height: 100%;
   left: 0;
@@ -161,7 +162,7 @@ img {
   bottom: 0;
 }
 
-/* line 147, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 #right {
   height: 100%;
   right: 0;
@@ -169,7 +170,7 @@ img {
   bottom: 0;
 }
 
-/* line 153, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 #bottom {
   width: 100%;
   bottom: 0;
@@ -177,7 +178,7 @@ img {
   right: 0;
 }
 
-/* line 159, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 #top {
   width: 100%;
   top: 0;
@@ -185,7 +186,7 @@ img {
   right: 0;
 }
 
-/* line 166, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 nav {
   background: white;
   top: 14px;
@@ -201,13 +202,13 @@ nav {
   font-size: 12px;
 }
 @media (max-width: 480px) {
-  /* line 166, ../sass/style.scss */
+  /* line 167, ../sass/style.scss */
   nav {
     top: 10px;
     padding: 0 14px;
   }
 }
-/* line 183, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 nav ul {
   text-align: center;
   list-style: none;
@@ -215,38 +216,38 @@ nav ul {
   padding: 0;
   display: block;
 }
-/* line 189, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 nav ul li {
   padding: 15px;
   display: inline-block;
 }
 @media (max-width: 767px) {
-  /* line 189, ../sass/style.scss */
+  /* line 190, ../sass/style.scss */
   nav ul li {
     padding: 15px 5px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 200, ../sass/style.scss */
+  /* line 201, ../sass/style.scss */
   #content-about, #content-portfolio, #content-contact {
     padding-top: 55px;
   }
 }
 
-/* line 207, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 #content-about {
   width: 90%;
   max-width: 1200px;
   margin: auto;
   text-align: justify;
 }
-/* line 212, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 #content-about #pie {
   display: block;
   margin: auto;
 }
-/* line 216, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 #content-about #face {
   height: 200px;
   width: auto;
@@ -256,7 +257,7 @@ nav ul li {
   -moz-filter: saturate(70%);
   filter: saturate(70%);
 }
-/* line 223, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 #content-about #topics {
   background-image: -webkit-linear-gradient(-45deg, #f0cd5b 0%, #f0cd5b 50%, #edb600 51%, #edb600 100%);
   background-image: -moz-linear-gradient(-45deg, #f0cd5b 0%, #f0cd5b 50%, #edb600 51%, #edb600 100%);
@@ -266,25 +267,25 @@ nav ul li {
   height: 200px;
   margin: auto;
 }
-/* line 228, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 #content-about #topics ul {
   margin: 0 auto;
   list-style: none;
   padding: 5px 0;
 }
-/* line 232, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 #content-about #topics ul li {
   padding: 3px 0;
 }
 
-/* line 241, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 #content-portfolio {
   width: 90%;
   max-width: 800px;
   margin: 50px auto;
   text-align: justify;
 }
-/* line 246, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 #content-portfolio .portfolio-box {
   width: 100%;
   height: 230px;
@@ -295,13 +296,13 @@ nav ul li {
   margin: auto;
 }
 @media (max-width: 480px) {
-  /* line 246, ../sass/style.scss */
+  /* line 247, ../sass/style.scss */
   #content-portfolio .portfolio-box {
     height: 140px;
   }
 }
 
-/* line 268, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 #content-resume {
   width: 90%;
   max-width: 800px;
@@ -309,24 +310,24 @@ nav ul li {
   text-align: justify;
 }
 
-/* line 276, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 #content-contact {
   width: 90%;
   max-width: 800px;
   margin: 50px auto;
   text-align: justify;
 }
-/* line 283, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 #content-contact .social-media ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
-/* line 287, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 #content-contact .social-media ul li {
   display: inline-block;
 }
-/* line 289, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 #content-contact .social-media ul li img {
   -webkit-filter: invert(100%);
   -moz-filter: invert(100%);
@@ -336,7 +337,7 @@ nav ul li {
   margin: auto 5px;
   padding: 5px;
 }
-/* line 297, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 #content-contact .social-media ul li a:hover img {
   -webkit-filter: invert(30%);
   -moz-filter: invert(30%);
@@ -348,12 +349,12 @@ nav ul li {
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 767px) {
-  /* line 306, ../sass/style.scss */
+  /* line 307, ../sass/style.scss */
   #content-contact form {
     margin-top: 20px;
   }
 }
-/* line 311, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 #content-contact form input, #content-contact form textarea, #content-contact form button {
   letter-spacing: 1px;
   max-width: 100%;
@@ -376,16 +377,16 @@ nav ul li {
   background-color: transparent;
 }
 @media (max-width: 767px) {
-  /* line 311, ../sass/style.scss */
+  /* line 312, ../sass/style.scss */
   #content-contact form input, #content-contact form textarea, #content-contact form button {
     padding: 10px;
   }
 }
-/* line 335, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 #content-contact form textarea {
   height: 200px;
 }
-/* line 338, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 #content-contact form button {
   border: none !important;
   background: #D8D8D8;
