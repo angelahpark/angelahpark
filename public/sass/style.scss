@@ -42,7 +42,7 @@ body {
 	left: 0;
 	background: #F8F8F8;
 	font-family: $lucida;
-	font-size: 11px;
+	font-size: 12px;
 }
 a {
 	color: black;
@@ -60,7 +60,7 @@ h2, h3, h4 {
 h2 {
 	font-size: 17px;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	@media (max-width: 767px) {
 		margin-bottom: 30px;
 	}
@@ -206,36 +206,18 @@ nav {
 
 // about page //
 #content-about {
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;
-	text-align: justify;
-		#pie {
-			display: block;
-			margin: auto;
+	ul {
+		@media (max-width: 767px) {
+			max-width: 250px;
+			margin: 80px auto 0 auto;
 		}
-		#face {
-			height: 200px;
-			width: auto;
-			display: block;
-			margin: auto;
-			@include filter(saturate(70%));
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			padding: 2px 0;
 		}
-		#topics {
-			@include background-image(linear-gradient(-45deg, #F0CD5B 0%, #F0CD5B 50%, #EDB600 51%, #EDB600 100%));
-			width: 200px;
-			height: 200px;
-			margin: auto;
-			ul {
-				margin: 0 auto;
-				list-style: none;
-				padding: 5px 0;
-				li {
-					padding: 3px 0;
-				}
-			}			
-		}
-
+	}
 }
 
 // portfolio page //
@@ -308,37 +290,6 @@ nav {
 		@media (max-width: 767px) {
 			margin-top: 20px;
 			// display: none;
-		}
-		input, textarea, button {
-			letter-spacing: 1px;
-			max-width: 100%;
-			width: 350px;
-			resize: none;
-			border-style: none;
-			border: 1px solid #D8D8D8;
-			padding: 20px 10px;
-			font-size: 11px;
-			margin: -1px auto;
-			border-radius: 0;
-			display: block;
-			box-sizing: border-box;
-			outline: none !important;
-			-webkit-box-shadow: none !important;
-			-moz-box-shadow: none !important;
-			box-shadow: none !important;
-			text-transform: uppercase;
-			color: black;
-			background-color: transparent;
-			@media (max-width: 767px) {
-				padding: 10px;
-			}
-		}
-		textarea {
-			height: 200px;
-		}
-		button {
-			border: none !important;
-			background: #D8D8D8;
 		}
 	}
 }
