@@ -249,7 +249,7 @@ nav {
 #content-portfolio {
 	width: 90%;
 	max-width: 800px;
-	margin: 50px auto;
+	margin: 0px auto;
 	text-align: justify;
 	h2 {
 		text-align: center;
@@ -295,7 +295,10 @@ nav {
 #content-contact {
 	width: 90%;
 	max-width: 800px;
-	margin: 50px auto;
+	margin: 0px auto;
+	h2 {
+		text-align: center;
+	}
 	.social-media {
 		ul {
 			list-style-type: none;
