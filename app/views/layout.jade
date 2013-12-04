@@ -4,35 +4,22 @@ html(lang="en")
     title ANGELAHPARK
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-    //- link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
-    //- link(rel="stylesheet", href="/stylesheets/bootstrap-responsive.min.css")
     link(rel="stylesheet", href="/stylesheets/style.css")
-    //- link(rel="stylesheet", href="/stylesheets/swipe-style.css")
-    //- link(rel="stylesheet", href="/stylesheets/owl.carousel.css")
-    //- link(rel="stylesheet", href="/stylesheets/owl.theme.css")
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
     script(src="/js/Chart.min.js")
-    // script(src="/js/swipe.js")
-    // script(src="/js/owl.carousel.min.js")
     link(rel="shortcut icon", href="/favicon.ico")
   body
-    div.body-border#left
-    div.body-border#right
-    div.body-border#bottom
-    div.body-border#top
     header
         nav
             ul
-              li.about
-                a(href="#about") about
-              li.portfolio
-                a(href="#portfolio") portfolio
-              //- li.resume
-              //-   a(href="#resume") resume
-              //- li.travel
-              //-   a(href="#") travel
-              li.contact
-                a(href="#contact") contact
+                li.home
+                  a(href="#home") home
+                li.about
+                    a(href="#about") about
+                li.portfolio
+                    a(href="#portfolio") portfolio
+                li.contact
+                    a(href="#contact") contact
     div.main
         block content
     script

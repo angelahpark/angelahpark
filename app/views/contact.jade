@@ -1,6 +1,5 @@
 mixin contact()
 	- var socialObject = {'facebook': 'http://www.facebook.com/angelahpark', 'tumblr': 'http://www.angelahpark.tumblr.com', 'instagram': 'http://www.instagram.com/angelahpark', 'linkedin': 'http://www.linkedin.com/pub/angela-park/40/147/376/', 'pinterest': 'http://www.pinterest.com/angelahpark'}
-	.number.target#contact 3
 	div#content-contact
 		h2 get in touch
 		div.social-media
@@ -8,5 +7,5 @@ mixin contact()
 				each link, image in socialObject
 					li
 						a(href=link)
-							img(src="images/social/" + image+ ".png")
+							img(src="images/social/" + image + ".png")
 	script

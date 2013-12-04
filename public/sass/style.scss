@@ -1,11 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Syncopate);
 @import url(http://fonts.googleapis.com/css?family=Arvo);
 @import url(http://fonts.googleapis.com/css?family=Varela);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:100,400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,300italic);
 @import "compass/css3/filter";
 @import "compass/css3/transform";
 @import "compass";
+@import "compass/css3/box-sizing";
 
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
@@ -20,7 +23,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
 }
 
@@ -32,6 +35,8 @@ $montserrat: 'Montserrat', sans-serif;
 $helvetica-neue: 'Helvetica Neue', sans-serif;
 $source: 'Source Sans Pro', sans-serif;
 $lucida: 'Lucida Grande', sans-serif;
+$josefin: 'Josefin Sans', sans-serif;
+$slab: 'Josefin Slab', serif;
 
 html, body {
 	height: 100%;
@@ -40,9 +45,9 @@ html, body {
 
 body {
 	left: 0;
-	background: #F8F8F8;
-	font-family: $lucida;
-	font-size: 12px;
+	background: whiteSmoke;
+	font-family: $slab;
+	font-size: 14px;
 }
 a {
 	color: black;
@@ -54,13 +59,16 @@ h2, h3, h4 {
 	letter-spacing: 1px;
 	font-weight: normal;
 	line-height: normal;
-	font-family: $varela;
+	font-family: $josefin;
 	text-transform: uppercase;
+	margin-top: 0;
 }
 h2 {
-	font-size: 17px;
-	text-align: center;
 	margin-bottom: 40px;
+	line-height: 45px;
+	font-size: 35px;
+	font-weight: 100;
+	letter-spacing: 7px;
 	@media (max-width: 767px) {
 		margin-bottom: 30px;
 	}
@@ -70,12 +78,6 @@ h3 {
 	background: #F8F8F8;
 	padding: 5px;
 	margin: 0;
-}
-.title {
-	border: 1px solid #666666;
-	display: inline-block;
-	background: white;
-	padding: 10px 15px;
 }
 img {
 	width: 100%;
@@ -92,29 +94,31 @@ img {
 		margin-bottom: 30px;
 	}
 }
-.number {
-	position: absolute;
-	font-size: 100px;
-	top: 0;
-	left: -25px;
-	margin: 0;
-	font-family: $didot;
-	font-weight: 900;
-	z-index: -999;
-}
+// .number {
+// 	position: absolute;
+// 	font-size: 100px;
+// 	top: 0;
+// 	left: -25px;
+// 	margin: 0;
+// 	font-family: $didot;
+// 	font-weight: 900;
+// 	z-index: -999;
+// }
 
 .main {
-	padding: 30px 50px;
+	padding: 0px;
 	height: 100%;
 	@media (max-width: 767px) {
-		padding: 40px;
+		padding: 40px 20px;
 	}
 
 	section {
 		@media (min-width: 767px) {
 			@include flexbox();
-			height: 95%;
-			padding: 0;
+			@include box-sizing('border-box');
+			height: 100%;
+			padding: 61px 0px 0px 0px;
+			min-height: 650px;
 		}
 		position: relative;
 		padding: 0 0 100px 0;
@@ -131,56 +135,20 @@ img {
 	   position:absolute;
 	}
 }
-.body-border {
-	border: 7px solid #444;
-	position: fixed;
-	z-index: 99999;
-	@media (max-width: 480px) {
-		border: 5px solid #444;
-	}
-}
-#left {
-	height: 100%;
-	left: 0;
-	top: 0;
-	bottom: 0;
-}
-#right {
-	height: 100%;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-#bottom {
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-#top {
-	width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-}
 
 nav {
-	background: white;
-	top: 14px;
+	background: #eeeeee;
+	top: 0;
 	z-index: 1000;
 	position: fixed;
 	box-sizing: border-box;
 	left: 0;
-	padding: 0 14px;
 	width: 100%;
-	font-family: "Montserrat", sans-serif;
+	font-family: $josefin;
+	font-weight: 300;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 12px;
-	@media (max-width: 480px) {
-		top: 10px;
-		padding: 0 14px;
-	}
+	letter-spacing: 3px;
+	font-size: 11px;
 	ul {
 		text-align: center;
 		list-style: none;
@@ -188,17 +156,46 @@ nav {
 		padding: 0;
 		display: block;
 		li {
-			padding: 15px;
 			display: inline-block;
-			@media (max-width: 767px) {
-				padding: 15px 5px;
+			a {
+				color: #999999;
+				padding: 25px;
+				@media (max-width: 767px) {
+					padding: 15px 5px;
+				}
+			}
+			&:hover {
+				background: dimGray;
+				a {
+					color: white;
+				}
 			}
 		}
 	}
 }
 
+
+
+#home{
+	div {
+		margin: auto;
+		background: #eeeeee;
+		img {
+			width: 200px;
+			display: block;
+			max-width: 51%;
+			margin: auto;
+		} 
+	}
+	
+}
+
+
+
 // contents
 #content-about, #content-portfolio, #content-contact {
+	position: relative;
+	width: 100%;
 	@media(max-width: 767px) {
 		padding-top: 55px;
 	}
@@ -206,16 +203,44 @@ nav {
 
 // about page //
 #content-about {
+	height: inherit;
+	.pic {
+		width: 70%;
+		height: inherit;
+		background: #eeeeee;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		h2 {
+			position: absolute;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			h2 {
+				position: relative;
+			}
+		}
+	}
 	ul {
 		@media (max-width: 767px) {
-			max-width: 250px;
-			margin: 80px auto 0 auto;
+			// max-width: 250px;
+			// margin: 80px auto 0 auto;
+			left: 0;
+			padding: 0;
 		}
+		display: inline-block;
+		position: relative;
+		left: 100%;
 		list-style: none;
-		padding: 0;
+		padding: 30px;
 		margin: 0;
 		li {
 			padding: 2px 0;
+			span {
+				font-weight: 700;
+				margin-right: 10px;
+			}
 		}
 	}
 }
@@ -226,23 +251,34 @@ nav {
 	max-width: 800px;
 	margin: 50px auto;
 	text-align: justify;
+	h2 {
+		text-align: center;
+	}
 	.portfolio-box {
-		width: 100%;
 		height: 230px;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
 		max-width: 400px;
 		margin: auto;
-		// @include flexbox();
+		padding: 10px;
+		@include flexbox();
 		@media (max-width: 480px) {
 			height: 140px;
 		}
 		.title {
-			// border-bottom: 3px solid black;
-			// display: inline-block;
-			// padding: 5px 15px;
-			// background: #F8F8F8;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			@include flexbox();
+			@include box-sizing('border-box');
+			background: #EEEEEE;
+			justify-content: center;
+			opacity: 0;
+			&:hover {
+				opacity: .8;
+				@include transition(all, .3s, ease-in-out);
+			}
 		}
 	}
 }
@@ -260,8 +296,6 @@ nav {
 	width: 90%;
 	max-width: 800px;
 	margin: 50px auto;
-	text-align: justify;
-
 	.social-media {
 		ul {
 			list-style-type: none;
