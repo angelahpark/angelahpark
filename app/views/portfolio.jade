@@ -2,9 +2,15 @@ mixin portfolio()
 	- var portfolioObject = {'Yamaha Boats & Waverunners': ['yamaha_link.png','http://yamahaboats.mobi/'], 'Balloon': ['balloon_link.png'], 'Naked Juice - Drink Good Do Good': ['naked_link.png','http://drinkgooddogood.com/'], 'Kenny Stoff': ['kenny_link.png', 'http://kennystoff.com/'], 'Manufactur Concept': ['manufactur_link.jpg', 'http://manufactur.co/'], 'Marysia Swim': ['marysia_link.jpg','http://marysiaswim.com/']}
 	div#content-portfolio
 		h2 portfolio
-		each info, title in portfolioObject
-			div.column-three
-				a(target="_blank" href=info[1])
-					div.portfolio-box(style="background-image:url('images/portfolio/"+ info[0] +"')")
-						.title=title
+		.devices
+			img(src="images/devices/imac.png").imac
+			img(src="images/portfolio/lalune_link.png").portfolioLink
+			//- img(src="images/devices/ipad.png").ipad
+			//- img(src="images/portfolio/lalune_ipad.png").portfolioIpad
+			//- img(src="images/devices/iphone.png").iphone
+		//- each info, title in portfolioObject
+		//- 	div.column-three
+		//- 		a(target="_blank" href=info[1])
+		//- 			div.portfolio-box(style="background-image:url('images/portfolio/"+ info[0] +"')")
+		//- 				.title=title
 		div(style="clear: both;")

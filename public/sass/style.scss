@@ -254,6 +254,43 @@ nav {
 	h2 {
 		text-align: center;
 	}
+	.devices {
+		margin: auto;
+		.imac {
+			height: 400px;
+			width: auto;
+			z-index: -9;
+			display: block;
+			margin: auto;
+		}
+		.portfolioLink {
+			position: absolute;
+			height: 240px;
+			width: auto;
+			left: 50%;
+			bottom: 137px;
+			border: 1px solid #808080;
+			box-sizing: border-box;
+			margin-left: -207px;
+		}
+		.ipad {
+			height: 250px;
+			width: auto;
+		}
+		.portfolioIpad {
+			height: 203px;
+			width: auto;
+			position: absolute;
+			left: 492px;
+			bottom: 29px;
+		}
+		.iphone {
+			height: 170px;
+			width: auto;
+			position: relative;
+			left: -50px;
+		}
+	}
 	.portfolio-box {
 		height: 230px;
 		background-size: cover;

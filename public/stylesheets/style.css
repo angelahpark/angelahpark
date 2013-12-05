@@ -267,6 +267,49 @@ nav ul li:hover a {
   text-align: center;
 }
 /* line 257, ../sass/style.scss */
+#content-portfolio .devices {
+  margin: auto;
+}
+/* line 259, ../sass/style.scss */
+#content-portfolio .devices .imac {
+  height: 400px;
+  width: auto;
+  z-index: -9;
+  display: block;
+  margin: auto;
+}
+/* line 266, ../sass/style.scss */
+#content-portfolio .devices .portfolioLink {
+  position: absolute;
+  height: 240px;
+  width: auto;
+  left: 50%;
+  bottom: 137px;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+  margin-left: -207px;
+}
+/* line 276, ../sass/style.scss */
+#content-portfolio .devices .ipad {
+  height: 250px;
+  width: auto;
+}
+/* line 280, ../sass/style.scss */
+#content-portfolio .devices .portfolioIpad {
+  height: 203px;
+  width: auto;
+  position: absolute;
+  left: 492px;
+  bottom: 29px;
+}
+/* line 287, ../sass/style.scss */
+#content-portfolio .devices .iphone {
+  height: 170px;
+  width: auto;
+  position: relative;
+  left: -50px;
+}
+/* line 294, ../sass/style.scss */
 #content-portfolio .portfolio-box {
   height: 230px;
   background-size: cover;
@@ -283,12 +326,12 @@ nav ul li:hover a {
   align-items: center;
 }
 @media (max-width: 480px) {
-  /* line 257, ../sass/style.scss */
+  /* line 294, ../sass/style.scss */
   #content-portfolio .portfolio-box {
     height: 140px;
   }
 }
-/* line 269, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 #content-portfolio .portfolio-box .title {
   width: 100%;
   height: 100%;
@@ -306,7 +349,7 @@ nav ul li:hover a {
   justify-content: center;
   opacity: 0;
 }
-/* line 278, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 #content-portfolio .portfolio-box .title:hover {
   opacity: .8;
   -webkit-transition: all 0.3s ease-in-out;
@@ -316,7 +359,7 @@ nav ul li:hover a {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 287, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 #content-resume {
   width: 90%;
   max-width: 800px;
@@ -324,27 +367,27 @@ nav ul li:hover a {
   text-align: justify;
 }
 
-/* line 295, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 #content-contact {
   width: 90%;
   max-width: 800px;
   margin: 0px auto;
 }
-/* line 299, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 #content-contact h2 {
   text-align: center;
 }
-/* line 303, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 #content-contact .social-media ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
-/* line 307, ../sass/style.scss */
+/* line 344, ../sass/style.scss */
 #content-contact .social-media ul li {
   display: inline-block;
 }
-/* line 309, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 #content-contact .social-media ul li img {
   -webkit-filter: invert(100%);
   -moz-filter: invert(100%);
@@ -354,7 +397,7 @@ nav ul li:hover a {
   margin: auto 5px;
   padding: 5px;
 }
-/* line 317, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 #content-contact .social-media ul li a:hover img {
   -webkit-filter: invert(30%);
   -moz-filter: invert(30%);
@@ -366,7 +409,7 @@ nav ul li:hover a {
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 767px) {
-  /* line 326, ../sass/style.scss */
+  /* line 363, ../sass/style.scss */
   #content-contact form {
     margin-top: 20px;
   }
