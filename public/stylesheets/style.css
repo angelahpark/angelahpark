@@ -5,21 +5,28 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,300italic);
-/* line 41, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 56, ../sass/style.scss */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 body {
   left: 0;
   background: whiteSmoke;
-  font-family: "Josefin Slab", serif;
+  font-family: "Didot", "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   font-size: 14px;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 a {
   color: black;
   text-decoration: none;
@@ -27,7 +34,7 @@ a {
   display: block;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 h2, h3, h4 {
   letter-spacing: 1px;
   font-weight: normal;
@@ -37,7 +44,7 @@ h2, h3, h4 {
   margin-top: 0;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 h2 {
   margin-bottom: 40px;
   line-height: 45px;
@@ -46,13 +53,13 @@ h2 {
   letter-spacing: 7px;
 }
 @media (max-width: 767px) {
-  /* line 66, ../sass/style.scss */
+  /* line 81, ../sass/style.scss */
   h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
-/* line 76, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 h3 {
   font-size: 12px;
   background: #F8F8F8;
@@ -60,12 +67,12 @@ h3 {
   margin: 0;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 img {
   width: 100%;
 }
 
-/* line 85, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .column-three {
   width: 33.33333%;
   display: inline-block;
@@ -73,7 +80,7 @@ img {
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 85, ../sass/style.scss */
+  /* line 100, ../sass/style.scss */
   .column-three {
     width: 100%;
     display: block;
@@ -82,40 +89,31 @@ img {
   }
 }
 
-/* line 108, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 .main {
   padding: 0px;
   height: 100%;
 }
-@media (max-width: 767px) {
-  /* line 108, ../sass/style.scss */
-  .main {
-    padding: 40px 20px;
-  }
-}
-/* line 115, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .main section {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  height: 100%;
+  padding: 61px 0 0 0;
+  min-height: 400px;
   position: relative;
-  padding: 0 0 100px 0;
 }
-@media (min-width: 767px) {
-  /* line 115, ../sass/style.scss */
-  .main section {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 61px 0px 0px 0px;
-    min-height: 650px;
-  }
-}
-/* line 126, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .main .target {
   border-top: 60px solid transparent;
   margin: -30px 0 0;
@@ -123,19 +121,18 @@ img {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 133, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .main .target:before {
   content: "";
   position: absolute;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 nav {
   background: #eeeeee;
   top: 0;
   z-index: 1000;
   position: fixed;
-  box-sizing: border-box;
   left: 0;
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
@@ -144,7 +141,7 @@ nav {
   letter-spacing: 3px;
   font-size: 11px;
 }
-/* line 152, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 nav ul {
   text-align: center;
   list-style: none;
@@ -152,214 +149,348 @@ nav ul {
   padding: 0;
   display: block;
 }
-/* line 158, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 nav ul li {
   display: inline-block;
 }
-/* line 160, ../sass/style.scss */
+/* line 163, ../sass/style.scss */
 nav ul li a {
   color: #999999;
   padding: 25px;
 }
 @media (max-width: 767px) {
-  /* line 160, ../sass/style.scss */
+  /* line 163, ../sass/style.scss */
   nav ul li a {
     padding: 15px 5px;
   }
 }
-/* line 167, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 nav ul li:hover {
   background: dimGray;
 }
-/* line 169, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 nav ul li:hover a {
   color: white;
 }
 
-/* line 180, ../sass/style.scss */
-#home div {
-  margin: auto;
-  background: #eeeeee;
-}
 /* line 183, ../sass/style.scss */
-#home div img {
-  width: 200px;
+#home #content-home {
+  margin: auto;
+  padding-top: 0;
+}
+/* line 186, ../sass/style.scss */
+#home #content-home img {
+  width: 150px;
   display: block;
-  max-width: 51%;
+  max-width: 50%;
   margin: auto;
 }
-
-/* line 196, ../sass/style.scss */
-#content-about, #content-portfolio, #content-contact {
-  position: relative;
-  width: 100%;
-}
-@media (max-width: 767px) {
-  /* line 196, ../sass/style.scss */
-  #content-about, #content-portfolio, #content-contact {
-    padding-top: 55px;
+@media (max-width: 480px) {
+  /* line 186, ../sass/style.scss */
+  #home #content-home img {
+    width: 25%;
   }
 }
 
-/* line 205, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
+#content-home, #content-about, #content-portfolio, #content-contact {
+  position: relative;
+  width: 100%;
+}
+
+/* line 210, ../sass/style.scss */
+#about {
+  padding-top: 61px;
+}
+@media (max-width: 767px) {
+  /* line 210, ../sass/style.scss */
+  #about {
+    padding-top: 41px;
+  }
+}
+
+/* line 217, ../sass/style.scss */
 #content-about {
   height: inherit;
 }
-/* line 207, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 #content-about .pic {
+  padding: 10px;
   width: 70%;
   height: inherit;
-  background: #eeeeee;
   position: relative;
   top: 0;
   left: 0;
   z-index: -1;
+  background: url("/images/about.jpg") no-repeat center center;
+  background-size: cover;
 }
-/* line 215, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 #content-about .pic h2 {
   position: absolute;
 }
 @media (max-width: 767px) {
-  /* line 207, ../sass/style.scss */
+  /* line 219, ../sass/style.scss */
   #content-about .pic {
     width: 100%;
+    background: url("../images/profile.png") #eeeeee bottom no-repeat;
+    background-size: 39px;
   }
-  /* line 220, ../sass/style.scss */
+  /* line 236, ../sass/style.scss */
   #content-about .pic h2 {
     position: relative;
   }
 }
-/* line 225, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 #content-about ul {
   display: inline-block;
   position: relative;
   left: 100%;
   list-style: none;
-  padding: 30px;
   margin: 0;
 }
 @media (max-width: 767px) {
-  /* line 225, ../sass/style.scss */
+  /* line 241, ../sass/style.scss */
   #content-about ul {
     left: 0;
     padding: 0;
   }
 }
-/* line 238, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 #content-about ul li {
   padding: 2px 0;
 }
-/* line 240, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #content-about ul li span {
   font-weight: 700;
   margin-right: 10px;
 }
 
-/* line 249, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 #content-portfolio {
-  width: 90%;
   max-width: 800px;
   margin: 0px auto;
   text-align: justify;
 }
-/* line 254, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 #content-portfolio h2 {
   text-align: center;
 }
-/* line 257, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 #content-portfolio .devices {
   margin: auto;
+  position: relative;
 }
-/* line 259, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 #content-portfolio .devices .imac {
   height: 400px;
   width: auto;
-  z-index: -9;
+  margin: auto;
   display: block;
-  margin: auto;
-}
-/* line 266, ../sass/style.scss */
-#content-portfolio .devices .portfolioLink {
-  position: absolute;
-  height: 240px;
-  width: auto;
-  left: 50%;
-  bottom: 137px;
-  border: 1px solid #808080;
-  box-sizing: border-box;
-  margin-left: -207px;
-}
-/* line 276, ../sass/style.scss */
-#content-portfolio .devices .ipad {
-  height: 250px;
-  width: auto;
-}
-/* line 280, ../sass/style.scss */
-#content-portfolio .devices .portfolioIpad {
-  height: 203px;
-  width: auto;
-  position: absolute;
-  left: 492px;
-  bottom: 29px;
-}
-/* line 287, ../sass/style.scss */
-#content-portfolio .devices .iphone {
-  height: 170px;
-  width: auto;
-  position: relative;
-  left: -50px;
-}
-/* line 294, ../sass/style.scss */
-#content-portfolio .portfolio-box {
-  height: 230px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("../images/devices/imac.png");
+  padding: 25px 22px 130px 22px;
+  background-size: auto 400px;
   background-position: center center;
-  max-width: 400px;
-  margin: auto;
-  padding: 10px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
+  background-repeat: no-repeat;
 }
 @media (max-width: 480px) {
-  /* line 294, ../sass/style.scss */
-  #content-portfolio .portfolio-box {
-    height: 140px;
+  /* line 272, ../sass/style.scss */
+  #content-portfolio .devices .imac {
+    height: 255px;
+    padding: 15px 22px 85px 22px;
+    background-size: 300px auto;
+  }
+}
+/* line 288, ../sass/style.scss */
+#content-portfolio .devices .iphone {
+  height: 400px;
+  width: auto;
+  margin: auto;
+  display: block;
+  background: url("../images/devices/iphone.png");
+  padding: 85px 15px;
+  background-size: auto 325px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 100px;
+}
+@media (max-width: 480px) {
+  /* line 288, ../sass/style.scss */
+  #content-portfolio .devices .iphone {
+    padding: 39px 15px 165px 15px;
+    background-size: auto 275px;
+    background-position: top center;
+    float: none;
   }
 }
 /* line 306, ../sass/style.scss */
-#content-portfolio .portfolio-box .title {
-  width: 100%;
-  height: 100%;
+#content-portfolio .devices .iphone ~ .description {
+  opacity: 1;
+  margin-left: 0;
+  left: 40%;
+  top: 75px;
+  width: 350px;
+}
+@media (max-width: 480px) {
+  /* line 306, ../sass/style.scss */
+  #content-portfolio .devices .iphone ~ .description {
+    background-size: auto 200px;
+    top: 240px;
+    width: 270px;
+    height: 155px;
+    left: -135px;
+    margin-left: 50%;
+  }
+}
+/* line 322, ../sass/style.scss */
+#content-portfolio .devices .description {
+  z-index: 999;
+  position: absolute;
+  top: 25px;
+  height: 245px;
+  width: 428px;
   margin: auto;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display: block;
+  left: -214px;
+  margin-left: 50%;
+  text-align: center;
+  justify-content: center;
+  background: white;
+  opacity: 0;
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #EEEEEE;
-  justify-content: center;
-  opacity: 0;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
 }
-/* line 315, ../sass/style.scss */
-#content-portfolio .portfolio-box .title:hover {
-  opacity: .8;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+@media (max-width: 480px) {
+  /* line 322, ../sass/style.scss */
+  #content-portfolio .devices .description {
+    width: 270px;
+    height: 155px;
+    left: -135px;
+    top: 220px;
+    opacity: 1;
+    background: transparent;
+  }
+}
+/* line 345, ../sass/style.scss */
+#content-portfolio .devices .description:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 349, ../sass/style.scss */
+#content-portfolio .devices .description .descriptionInner {
+  margin: auto;
+}
+@media (max-width: 480px) {
+  /* line 349, ../sass/style.scss */
+  #content-portfolio .devices .description .descriptionInner {
+    display: inline-block;
+  }
+}
+/* line 355, ../sass/style.scss */
+#content-portfolio .devices .description .title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Josefin Sans", sans-serif;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+/* line 364, ../sass/style.scss */
+#content-portfolio .devices .description .role {
+  font-style: italic;
+  font-size: 11px;
+}
+/* line 368, ../sass/style.scss */
+#content-portfolio .devices .description .linkToSite {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  right: 10px;
+  border: 2px solid #666666;
+  padding: 5px;
+}
+@media (max-width: 480px) {
+  /* line 368, ../sass/style.scss */
+  #content-portfolio .devices .description .linkToSite {
+    display: inline-block;
+    position: relative;
+    bottom: 17px;
+    right: 0;
+    margin-left: 30px;
+  }
+}
+/* line 405, ../sass/style.scss */
+#content-portfolio .swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+/* line 410, ../sass/style.scss */
+#content-portfolio .swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+/* line 414, ../sass/style.scss */
+#content-portfolio .swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+/* line 419, ../sass/style.scss */
+#content-portfolio .arrow-prev {
+  position: absolute;
+  top: 50%;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../images/arrow-prev1.png") no-repeat center;
+  float: left;
+  background-size: cover;
+  display: block;
+  display: none;
+}
+@media (max-width: 480px) {
+  /* line 419, ../sass/style.scss */
+  #content-portfolio .arrow-prev {
+    top: 55%;
+  }
+}
+/* line 434, ../sass/style.scss */
+#content-portfolio .arrow-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../images/arrow-next1.png") no-repeat center;
+  float: right;
+  background-size: cover;
+}
+@media (max-width: 480px) {
+  /* line 434, ../sass/style.scss */
+  #content-portfolio .arrow-next {
+    top: 55%;
+  }
 }
 
-/* line 324, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 #content-resume {
   width: 90%;
   max-width: 800px;
@@ -367,37 +498,35 @@ nav ul li:hover a {
   text-align: justify;
 }
 
-/* line 332, ../sass/style.scss */
+/* line 460, ../sass/style.scss */
 #content-contact {
-  width: 90%;
   max-width: 800px;
   margin: 0px auto;
 }
-/* line 336, ../sass/style.scss */
+/* line 463, ../sass/style.scss */
 #content-contact h2 {
   text-align: center;
 }
-/* line 340, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 #content-contact .social-media ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
-/* line 344, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 #content-contact .social-media ul li {
   display: inline-block;
 }
-/* line 346, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 #content-contact .social-media ul li img {
   -webkit-filter: invert(100%);
   -moz-filter: invert(100%);
   filter: invert(100%);
   height: 15px;
   width: auto;
-  margin: auto 5px;
-  padding: 5px;
+  margin: auto 10px;
 }
-/* line 354, ../sass/style.scss */
+/* line 480, ../sass/style.scss */
 #content-contact .social-media ul li a:hover img {
   -webkit-filter: invert(30%);
   -moz-filter: invert(30%);
@@ -407,10 +536,4 @@ nav ul li:hover a {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-@media (max-width: 767px) {
-  /* line 363, ../sass/style.scss */
-  #content-contact form {
-    margin-top: 20px;
-  }
 }

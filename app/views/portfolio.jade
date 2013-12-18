@@ -1,16 +1,25 @@
 mixin portfolio()
-	- var portfolioObject = {'Yamaha Boats & Waverunners': ['yamaha_link.png','http://yamahaboats.mobi/'], 'Balloon': ['balloon_link.png'], 'Naked Juice - Drink Good Do Good': ['naked_link.png','http://drinkgooddogood.com/'], 'Kenny Stoff': ['kenny_link.png', 'http://kennystoff.com/'], 'Manufactur Concept': ['manufactur_link.jpg', 'http://manufactur.co/'], 'Marysia Swim': ['marysia_link.jpg','http://marysiaswim.com/']}
+	mixin portfolioSlides(image, title, role, link)
+		div.devices
+			img(src= image)(class=attributes.device)
+			.description
+				.descriptionInner
+					.title= title
+					.role= role
+				a(href=link target="blank").linkToSite
+					| to site
 	div#content-portfolio
 		h2 portfolio
-		.devices
-			img(src="images/devices/imac.png").imac
-			img(src="images/portfolio/lalune_link.png").portfolioLink
-			//- img(src="images/devices/ipad.png").ipad
-			//- img(src="images/portfolio/lalune_ipad.png").portfolioIpad
-			//- img(src="images/devices/iphone.png").iphone
-		//- each info, title in portfolioObject
-		//- 	div.column-three
-		//- 		a(target="_blank" href=info[1])
-		//- 			div.portfolio-box(style="background-image:url('images/portfolio/"+ info[0] +"')")
-		//- 				.title=title
+		.swipe#portfolioSlides
+			.swipe-wrap
+				+portfolioSlides("images/portfolio/lalune_imac.png", "La Lune And Moon", "WEB DESIGN + DEVELOPMENT", "http://www.laluneandmoon.com")(device="imac");
+				+portfolioSlides("images/portfolio/yamaha_iphone.png", "Yamaha Boats", "WEB DEVELOPMENT", "http://www.yamahaboats.mobi")(device="iphone");
+				+portfolioSlides("images/portfolio/kennystoff_imac.png", "Kenny Stoff", "WEB DEVELOPMENT", "http://kennystoff.com/")(device="imac");
+				+portfolioSlides("images/portfolio/balloon_imac.png", "Balloon", "FRONT END WEB DEVELOPMENT", "http://www.balloon.com")(device="imac");
+				+portfolioSlides("images/portfolio/pemex_imac.png", "Pemex - Minisite", "WEB DEVELOPMENT", "http://www.pemexevents.com")(device="imac");
+				+portfolioSlides("images/portfolio/naked_imac.png", "Naked Juice - Minisite", "FRONT END WEB DEVELOPMENT", "http://www.drinkgooddogood.com")(device="imac");
+				+portfolioSlides("images/portfolio/marysia_imac.png", "Marysia Swim", "WEB DEVELOPMENT", "http://www.marysiaswim.com")(device="imac");
+				+portfolioSlides("images/portfolio/manufactur_imac.png", "Manufactur Co", "WEB DEVELOPMENT", "http://www.manufactur.co")(device="imac");
+			a.arrow-prev
+			a.arrow-next
 		div(style="clear: both;")
