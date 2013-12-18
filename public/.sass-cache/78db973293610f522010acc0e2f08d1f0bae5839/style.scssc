@@ -1,7 +1,7 @@
 3.2.10 (Media Mark)
-48ad3b3321979cd94538b90b615785f173b7ff4f
+3688b4213d4910d7647550f37ec2851dfd7539dd
 o:Sass::Tree::RootNode
-:@template"b$@import url(http://fonts.googleapis.com/css?family=Syncopate);
+:@template"f$@import url(http://fonts.googleapis.com/css?family=Syncopate);
 @import url(http://fonts.googleapis.com/css?family=Arvo);
 @import url(http://fonts.googleapis.com/css?family=Varela);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:100,400,700);
@@ -227,7 +227,7 @@ nav {
 		top: 0;
 		left: 0;
 		z-index: -1;
-		background: url('../images/about.jpg') center center no-repeat;
+		background: url('../images/about-pic.jpg') center center no-repeat;
 		background-size: cover;
 		h2 {
 			position: absolute;
@@ -610,7 +610,7 @@ about;2" ;iÒ;30;2@Q;4o;5;6{ ;iÒ;2@Q;iÒ;T;	[o;;i ;@;["paddin
 767px;iÿ;iÔ");iÔ;iÒo;);i ;@;*["#content-about;+o;,;-[o;.;-[o;/
 ;-[o;D;["content-about;2" ;iÙ;30;2@;4o;5;6{ ;iÙ;2@;iÙ;T;	[o;;i ;@;["height;;;o;;@;"inherit;;;	[ ;iÚo;);i ;@;*["	.pic;+o;,;-[o;.;-[o;/
 ;-[o;?;["pic;2" ;iÛ;30;2@•;4o;5;6{ ;iÛ;2@•;iÛ;T;	[o;;i ;@;["padding;;;o;;@;"	10px;;;	[ ;iÜo;;i ;@;["
-width;;;o;;@;"70%;;;	[ ;iÝo;;i ;@;["height;;;o;;@;"inherit;;;	[ ;iÞo;;i ;@;["position;;;o;;@;"relative;;;	[ ;ißo;;i ;@;["top;;;o;;@;"0;;;	[ ;iào;;i ;@;["	left;;;o;;@;"0;;;	[ ;iáo;;i ;@;["z-index;;;o;;@;"-1;;;	[ ;iâo;;i ;@;["background;;;o;	;@;[	o:Sass::Script::Funcall;8{ ;@;"url;0;![o;	;@;"../images/about.jpg;;';iã;ião;	;@;"center;;;ião;	;@;"center;;;ião;	;@;"no-repeat;;;iã;; ;iã;	[ ;ião;;i ;@;["background-size;;;o;;@;"
+width;;;o;;@;"70%;;;	[ ;iÝo;;i ;@;["height;;;o;;@;"inherit;;;	[ ;iÞo;;i ;@;["position;;;o;;@;"relative;;;	[ ;ißo;;i ;@;["top;;;o;;@;"0;;;	[ ;iào;;i ;@;["	left;;;o;;@;"0;;;	[ ;iáo;;i ;@;["z-index;;;o;;@;"-1;;;	[ ;iâo;;i ;@;["background;;;o;	;@;[	o:Sass::Script::Funcall;8{ ;@;"url;0;![o;	;@;"../images/about-pic.jpg;;';iã;ião;	;@;"center;;;ião;	;@;"center;;;ião;	;@;"no-repeat;;;iã;; ;iã;	[ ;ião;;i ;@;["background-size;;;o;;@;"
 cover;;;	[ ;iäo;);i ;@;*["h2;+o;,;-[o;.;-[o;/
 ;-[o;9	;["h2;10;2" ;iå;30;2@ç;4o;5;6{ ;iå;2@ç;iå;T;	[o;;i ;@;["position;;;o;;@;"absolute;;;	[ ;iæ;iåo;:;i ;@;" ;T;	[	o;;i ;@;["
 width;;;o;;@;"	100%;;;	[ ;iéo;;i ;@;["background;;;o;	;@;[	o;E;8{ ;@;"url;0;![o;	;@;"../images/profile.png;;';iê;iêo:Sass::Script::Color	;@:@attrs{	:rediî:
