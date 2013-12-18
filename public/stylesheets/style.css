@@ -222,7 +222,7 @@ nav ul li:hover a {
   top: 0;
   left: 0;
   z-index: -1;
-  background: url("/images/about.jpg") no-repeat center center;
+  background: url("../images/about.jpg") no-repeat center center;
   background-size: cover;
 }
 /* line 229, ../sass/style.scss */
