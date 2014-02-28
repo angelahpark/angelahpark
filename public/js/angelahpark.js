@@ -31,4 +31,24 @@ $(document).ready(function(){
             mySwipe.prev();
         });
     });
+
+    // find out if section is scrolled to //
+    function isScrolledIntoView(elem)
+    {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+        return (elemTop <= docViewTop && docViewTop <= elemBottom);
+    }
+
+    $(window).scroll(function() {
+            
+        // if(isScrolledIntoView($(this)))
+        // {
+        //     $('.portfolio').css("background-color", "#999999");
+        // } else {
+        //     $('.portfolio').css("background-color", "#eeeeee");
+        // }
+    });
 });

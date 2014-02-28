@@ -109,6 +109,16 @@ img {
 		margin-bottom: 30px;
 	}
 }
+.title {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: $josefin;
+}
+.role {
+	font-style: italic;
+	font-size: 11px;
+}
 
 .main {
 	padding: 0px;
@@ -138,6 +148,15 @@ img {
 	   content:"";
 	   position:absolute;
 	}
+}
+
+#construction {
+	@include flexbox();
+	padding: 20px 10px;
+	border: 10px solid black;
+	font-family: $montserrat;
+	height: 100%;
+	width: 100%;
 }
 
 nav {
@@ -250,9 +269,10 @@ nav {
 		margin: 0;
 		li {
 			padding: 2px 0;
-			span {
-				font-weight: 700;
-				margin-right: 10px;
+			border-bottom: 1px solid black;
+			margin: 20px auto 40px auto;
+			.title {
+				margin-bottom: 3px;
 			}
 		}
 	}
@@ -353,17 +373,9 @@ nav {
 				}
 			}
 			.title {
-				font-size: 13px;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				font-family: $josefin;
 				border-bottom: 1px solid black;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
-			}
-			.role {
-				font-style: italic;
-				font-size: 11px;
 			}
 			.linkToSite {
 				position: absolute;
